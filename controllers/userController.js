@@ -101,7 +101,7 @@ export const forgetEmailLink = async (req, res) => {
           process.env.SECRIT,
           { expiresIn: "10m" }
         );
-        const link = `http://localhost:3000/changepassword/${existEmail._id}/${token}`;
+        const link = `https://kotha.netlify.app/changepassword/${existEmail._id}/${token}`;
         let transporter = nodemailer.createTransport({
           service: "gmail",
           port: 587,
